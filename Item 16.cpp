@@ -68,7 +68,7 @@ class Polynomial
 
         RootsType roots() const
         {
-            std::lock_guard<std::mutex> g(m);       // Lock mutex
+            std::lock_guard<std::mutex> g { m };       // Lock mutex
 
             // If cache not valid compute roots, store them in rootVals
             if (!rootsAreValid)
@@ -163,7 +163,7 @@ class Widget
     public:
         int magicValue() const
         {
-            std::lock_guard<std::mutex> guard(m);          // lock mutdx
+            std::lock_guard<std::mutex> guard { m };          // lock mutdx
             if (cacheValid)
             {
                 return cachedValue;
