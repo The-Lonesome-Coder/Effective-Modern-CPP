@@ -30,14 +30,14 @@ std::array<int, arraySize2> data2;      // Fine, arraySize2 is constexpr
  *
  * Can be used in a wider range of contexts compared to non-constexpr functions.
  *
- * -------------------------------------------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------------------------------------
  *
  * Usage Examples:
  * Demonstrated with a function pow to compute power during compile-time for std::array size specification.
  *
  * Usage in a Point class where constructors and member functions are constexpr.
  *
- * -------------------------------------------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------------------------------------
  *
  * C++11 vs. C++14 Differences:
  * C++11 constexpr functions are limited to a single return statement.
