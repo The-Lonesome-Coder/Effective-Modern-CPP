@@ -36,6 +36,7 @@ int f(int x) throw();
  *
  * Declaring a function noexcept when it won't throw exceptions is essential for accurate interface specification.
  *
+ * ---------------------------------------------------------------------------------------------------------------------
  *
  * Optimization Opportunities:
  * noexcept allows compilers to optimize better, as they don't need to keep the runtime stack in an unwound state if an
@@ -82,10 +83,12 @@ struct pair
  *
  * Most functions are exception-neutral and should not be declared noexcept.
  *
+ * ---------------------------------------------------------------------------------------------------------------------
  *
  * Implicit noexcept in C++11:
  * By default, destructors and memory deallocation functions are noexcept.
  *
+ * ---------------------------------------------------------------------------------------------------------------------
  *
  * Wide vs. Narrow Contracts:
  * Functions with wide contracts (no preconditions) that don't emit exceptions should be declared noexcept.
@@ -93,6 +96,7 @@ struct pair
  * Functions with narrow contracts (preconditions exist) may not be suitable for noexcept if checking for precondition
  * violations involves throwing exceptions.
  *
+ * ---------------------------------------------------------------------------------------------------------------------
  *
  * Compiler Assistance:
  * Compilers typically do not help in identifying inconsistencies between function implementations and their exception
